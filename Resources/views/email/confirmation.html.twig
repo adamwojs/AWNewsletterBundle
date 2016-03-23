@@ -1,0 +1,9 @@
+<p>Witamy w gronie subskrybentów naszego newslettera. Zobacz więcej z Lustrem Biblioteki!</p>
+<p>Otrzymujesz tę wiadomość, ponieważ zapisałeś się do naszej listy mailingowej. Prosimy Cię o potwierdzenie zapisu poprzez kliknięcie w poniższy link:</p>
+<p>
+    <a href="{{ url('aw_newsletter_confirm', { hash: subscriber.emailHash }) }}">
+        {{ url('aw_newsletter_confirm', { hash: subscriber.emailHash }) }}
+    </a>
+</p>
+<p>Potwierdzając zapis wyrażasz zgodę na otrzymywanie od nas informacji mailowych. Twój adres i dane osobowe będą bezpieczne w naszej bazie danych, ponieważ nie przekazujemy tych informacji innym podmiotom.</p>
+<p>Jeśli nie zapisywałeś się na listę i nie chcesz otrzymywać od nas newslettera po prostu nie potwierdzaj zapisu. Możesz też wypisać się z listy klikając w link rezygnacji.</p>

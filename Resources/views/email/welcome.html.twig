@@ -1,0 +1,8 @@
+<p>Dziękujemy za zapisanie się do naszego newslettera. Będziesz otrzymywał od nas informacje o bibliotekach, nowych technologiach, czytelnictwie, rynku książki, wydarzeniach, warsztatach dla bibliotekarzy i nie tylko. </p>
+<p>Otrzymując nasz newsletter masz także szansę, by dowiedzieć się, co ciekawego dzieje się w świecie bibliotecznym oraz wziąć udział w projektach bibliotecznych. Dodatkowo otrzymasz ekskluzywne materiały tylko dla subskrybentów do wykorzystania w Twojej bibliotece!  Zobacz więcej w Lustrze Biblioteki!</p>
+<p>Nie wysyłamy spamu! Aby wypisać się z newslettera kliknij w link rezygnacji:</p>
+<p>
+    <a href="{{ url('aw_newsletter_unsubscribe', { hash: subscriber.emailHash }) }}">
+        {{ url('aw_newsletter_unsubscribe', { hash: subscriber.emailHash }) }}
+    </a>
+</p>

@@ -1,0 +1,10 @@
+parameters:
+    aw_newsletter.listener.confirmation_email.class: AW\NewsletterBundle\EventListener\ConfirmationEmailListener
+    
+services:
+    aw_newsletter.listener.confirmation_email:
+        class: %aw_newsletter.listener.confirmation_email.class%
+        arguments:
+            - @aw_newsletter.mailer.default
+        tags:
+            - { name: kernel.event_subscriber }

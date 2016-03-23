@@ -1,0 +1,40 @@
+parameters:
+    aw_newsletter.newsletter.form.type.class: AW\NewsletterBundle\Form\Type\NewsletterType
+    aw_newsletter.mailer.default.class: AW\NewsletterBundle\Mailer\Mailer
+    
+services:
+    aw_newsletter.newsletter.form:
+        class: Symfony\Component\Form\Form
+        factory_service: form.factory
+        factory_method: createNamed
+        arguments:
+            - %aw_newsletter.form.name%
+            - %aw_newsletter.form.type%
+            - ~
+            - { validation_groups: %aw_newsletter.form.validation_groups% }
+    
+    aw_newsletter.newsletter.form.type:
+        class: %aw_newsletter.newsletter.form.type.class%
+        arguments:
+            - %aw_newsletter.subscriber_class%
+        tags:
+            - { name: form.type, alias: aw_newsletter } 
+            
+    aw_newsletter.mailer.default:
+        class: %aw_newsletter.mailer.default.class%
+        arguments:
+            - @mailer
+            - @router
+            - @templating
+            - @translator
+            - confirmation: 
+                sender: 
+                    address: %aw_newsletter.confirmation.sender.address%
+                    name: %aw_newsletter.confirmation.sender.name%
+              welcome:
+                sender: 
+                    address: %aw_newsletter.welcome.sender.address%
+                    name: %aw_newsletter.welcome.sender.name%
+                        
+            
+        

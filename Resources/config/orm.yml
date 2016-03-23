@@ -1,0 +1,17 @@
+parameters:
+    aw_newsletter.newsletter_manager.default.class: AW\NewsletterBundle\Doctrine\NewsletterManager
+
+services:
+    aw_newsletter.newsletter_manager.default:
+        class: %aw_newsletter.newsletter_manager.default.class%
+        arguments:
+            - @aw_newsletter.entity_manager
+            - %aw_newsletter.subscriber_class%
+        public: false
+        
+    aw_newsletter.entity_manager:
+        class: Doctrine\ORM\EntityManager
+        factory_service: doctrine
+        factory_method: getManager
+        public: false
+        

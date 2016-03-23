@@ -1,0 +1,10 @@
+parameters:
+    aw_newsletter.listener.welcome_email.class: AW\NewsletterBundle\EventListener\WelcomeEmailListener
+    
+services:
+    aw_newsletter.listener.welcome_email:
+        class: %aw_newsletter.listener.welcome_email.class%
+        arguments:
+            - @aw_newsletter.mailer.default
+        tags:
+            - { name: kernel.event_subscriber }

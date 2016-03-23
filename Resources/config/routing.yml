@@ -1,0 +1,11 @@
+aw_newsletter_subscribe:
+    path: /subscribe
+    defaults:  { _controller: AWNewsletterBundle:Newsletter:subscribe }
+    
+aw_newsletter_confirm:
+    path: /confirm/{hash}
+    defaults:  { _controller: AWNewsletterBundle:Newsletter:confirm }    
+    
+aw_newsletter_unsubscribe:
+    path: /unsubscribe/{hash}
+    defaults:  { _controller: AWNewsletterBundle:Newsletter:unsubscribe }    

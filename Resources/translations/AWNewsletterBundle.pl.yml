@@ -1,0 +1,6 @@
+confirmation:
+    email:
+        subject: Potwierdzenie rejestracji
+welcome:
+    email:
+        subject: Witamy w Lustrze Biblioteki!

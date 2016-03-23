@@ -1,0 +1,24 @@
+{
+  "name": "aw/awnewsletter-bundle",
+  "type": "symfony-bundle",
+  "description": "Newsletter bundle",
+  "keywords": ["newsletter"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Adam Wójs",
+      "email": "adam@wojs.pl",
+      "homepage": "http://adam.wojs.pl"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "symfony/framework-bundle": ">=2.7",
+    "symfony/security-bundle": ">=2.7"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-0": { "AW\\NewsletterBundle": "" }
+  }
+}
