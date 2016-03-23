@@ -1,0 +1,2 @@
+# NewsletterBundle
+Symfony newsletter bundle
