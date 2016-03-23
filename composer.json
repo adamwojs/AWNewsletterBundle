@@ -19,6 +19,6 @@
   "require-dev": {
   },
   "autoload": {
-    "psr-4": { "AW\\NewsletterBundle": "" }
+    "psr-4": { "AW\\NewsletterBundle\\": "" }
   }
 }
